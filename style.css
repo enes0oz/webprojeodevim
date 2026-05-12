@@ -58,14 +58,6 @@ footer {
     transform: scale(1.03);
 }
 
-.card, .contact-card, .login-card {
-    border: none;
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
 .card:hover, .contact-card:hover, .login-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
@@ -128,5 +120,22 @@ footer {
     
     .card-body {
         text-align: center;
+    }
+}
+.main-slider-img {
+    height: 500px !important;
+    object-fit: cover !important;
+    border-radius: 20px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-slider-img {
+        height: 250px !important;
     }
 }
