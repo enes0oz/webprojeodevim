@@ -83,62 +83,7 @@
     </div>
 </div>
 
-<script>
-    // 1. YÖNTEM: Klasik JavaScript (Vanilla JS)
-    function validateWithJS() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phoneRegex = /^[0-9]+$/;
-
-        if (name === "" || email === "" || phone === "") {
-            alert("JS Hatası: Lütfen tüm alanları doldurun!");
-            return;
-        }
-        if (!emailRegex.test(email)) {
-            alert("JS Hatası: Geçersiz e-posta formatı!");
-            return;
-        }
-        if (!phoneRegex.test(phone)) {
-            alert("JS Hatası: Telefon sadece rakamlardan oluşmalıdır!");
-            return;
-        }
-        alert("JS Denetimi Başarılı: Form gönderilmeye hazır.");
-    }
-
-    // 2. YÖNTEM: Vue.js Framework
-    const { createApp } = Vue;
-    createApp({
-        data() {
-            return {
-                formData: {
-                    name: '',
-                    email: '',
-                    phone: '',
-                    gender: '',
-                    message: ''
-                }
-            }
-        },
-        methods: {
-            validateWithVue() {
-                const { name, email, phone } = this.formData;
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (!name || !email || !phone) {
-                    alert("Vue.js Hatası: Boş alan bırakmayınız!");
-                } else if (!emailRegex.test(email)) {
-                    alert("Vue.js Hatası: E-posta hatalı!");
-                } else if (isNaN(phone)) {
-                    alert("Vue.js Hatası: Telefon sadece sayı olmalı!");
-                } else {
-                    alert("Vue.js Denetimi Başarılı!\nİsim: " + name);
-                }
-            }
-        }
-    }).mount('#app');
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
